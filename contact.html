@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Triangle | تواصل معنا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Triangle</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">▲ TRIANGLE</div>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">عن الشركة</a>
-      <a href="services.html">الخدمات</a>
-      <a href="portfolio.html">الأعمال</a>
-      <a href="contact.html" class="active">تواصل معنا</a>
-      <button id="langBtn">EN</button>
-    </nav>
-  </header>
+  <nav>
+    <div class="logo">Triangle</div>
+    <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section class="content fade">
-    <h2>تواصل معنا</h2>
-    <p>راسلنا عبر البريد:</p>
-    <p><a href="mailto:abdelrahmbanmostafa@gmail.com">abdelrahmbanmostafa@gmail.com</a></p>
-
-    <form>
-      <input type="text" placeholder="اسمك">
-      <input type="email" placeholder="بريدك الإلكتروني">
-      <textarea placeholder="رسالتك"></textarea>
-      <button type="submit" class="btn">إرسال</button>
-    </form>
+  <section>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out via email below:</p>
+    <p class="contact-info">📧 <a href="mailto:abdelrahmbanmostafa@gmail.com">abdelrahmbanmostafa@gmail.com</a></p>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
