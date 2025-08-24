@@ -10,13 +10,16 @@ document.getElementById("langBtn")?.addEventListener("click", () => {
   }
 });
 
-// Reveal sections on scroll
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const rect = sec.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      sec.classList.add("visible");
-    }
-  });
+// Menu toggle for mobile
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  menuToggle.classList.toggle("open");
+});
+
+// Animate hamburger
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
 });
