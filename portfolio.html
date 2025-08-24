@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Triangle | الأعمال</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Triangle</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">▲ TRIANGLE</div>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">عن الشركة</a>
-      <a href="services.html">الخدمات</a>
-      <a href="portfolio.html" class="active">الأعمال</a>
-      <a href="contact.html">تواصل معنا</a>
-      <button id="langBtn">EN</button>
-    </nav>
-  </header>
+  <nav>
+    <div class="logo">Triangle</div>
+    <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section class="content fade">
-    <h2>أعمالنا</h2>
-    <div class="portfolio">
-      <div class="card">موقع شركة ناشئة</div>
-      <div class="card">متجر إلكتروني</div>
-      <div class="card">لوحة تحكم ذكية</div>
-      <div class="card">تطبيق ويب متقدم</div>
+  <section>
+    <h1>Our Works</h1>
+    <p>Here are some of our successful projects and collaborations with clients worldwide.</p>
+    <div class="portfolio-grid">
+      <div class="card">🌍 Corporate Website for Global Brand</div>
+      <div class="card">📱 Mobile App for E-Commerce</div>
+      <div class="card">🤖 AI Chatbot for Customer Support</div>
+      <div class="card">🎨 Creative Landing Page Designs</div>
     </div>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
