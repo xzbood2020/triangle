@@ -33,5 +33,28 @@ form button:hover { background: #0099cc; }
   .hero h1 { font-size: 28px; }
 }
 
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+
 
 
