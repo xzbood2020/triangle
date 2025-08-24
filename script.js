@@ -9,3 +9,14 @@ document.getElementById("langBtn")?.addEventListener("click", () => {
     alert("تم التبديل إلى العربية");
   }
 });
+
+// Reveal sections on scroll
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      sec.classList.add("visible");
+    }
+  });
+});
