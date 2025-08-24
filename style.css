@@ -1,69 +1,198 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-body { background: #0d0d0d; color: #f0f0f0; line-height: 1.6; }
-
-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #111; }
-header .logo { font-size: 20px; font-weight: bold; color: #00e6ff; }
-nav a { color: #fff; margin: 0 10px; text-decoration: none; transition: 0.3s; }
-nav a:hover, nav a.active { color: #00e6ff; }
-nav button { background: #00e6ff; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
-
-.hero { text-align: center; padding: 100px 20px; }
-.hero h1 { font-size: 40px; margin-bottom: 10px; }
-.hero p { font-size: 18px; margin-bottom: 20px; }
-.btn { background: #00e6ff; color: #000; padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: 0.3s; }
-.btn:hover { background: #0099cc; }
-
-.content { padding: 60px 20px; max-width: 900px; margin: auto; }
-.services li { margin: 10px 0; }
-
-.portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; }
-.card { background: #1a1a1a; padding: 20px; border-radius: 10px; text-align: center; transition: 0.3s; }
-.card:hover { background: #00e6ff; color: #000; }
-
-form { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
-form input, form textarea { padding: 10px; border: none; border-radius: 5px; }
-form button { background: #00e6ff; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
-form button:hover { background: #0099cc; }
-
-.fade { animation: fadeIn 1s ease-in-out; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-@media (max-width: 768px) {
-  nav { display: flex; flex-wrap: wrap; gap: 10px; }
-  .hero h1 { font-size: 28px; }
+/* ---------------------------
+   RESET & BASE
+----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navbar */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #0a0a0a;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------------------------
+   NAVBAR
+----------------------------*/
 nav {
+  width: 100%;
+  background: #111;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav .logo img {
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+nav .logo img:hover {
+  transform: scale(1.1);
 }
 
 nav ul {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+nav ul li a {
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: #00ffe7;
+}
 
+/* Mobile Nav */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
 
-
-
+/* ---------------------------
+   SECTIONS
+----------------------------*/
 section {
+  padding: 80px 10%;
+  min-height: 100vh;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
 section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+section h1, section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #00ffe7;
+}
+
+section p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* ---------------------------
+   BUTTONS
+----------------------------*/
+.btn {
+  display: inline-block;
+  background: #00ffe7;
+  color: #111;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #00bbaa;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ---------------------------
+   FOOTER
+----------------------------*/
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+----------------------------*/
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 25px;
+  }
+
+  section {
+    padding: 60px 8%;
+  }
+
+  section h1, section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background: #111;
+    padding: 20px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  section {
+    padding: 50px 6%;
+  }
+
+  section h1, section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav .logo img {
+    height: 35px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
 }
