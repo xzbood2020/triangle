@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Triangle | الخدمات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Triangle</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">▲ TRIANGLE</div>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">عن الشركة</a>
-      <a href="services.html" class="active">الخدمات</a>
-      <a href="portfolio.html">الأعمال</a>
-      <a href="contact.html">تواصل معنا</a>
-      <button id="langBtn">EN</button>
-    </nav>
-  </header>
+  <nav>
+    <div class="logo">Triangle</div>
+    <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section class="content fade">
-    <h2>خدماتنا</h2>
-    <ul class="services">
-      <li>تطوير المواقع الإلكترونية</li>
-      <li>تصميم واجهات المستخدم</li>
-      <li>تطوير تطبيقات الويب</li>
-      <li>حلول برمجية مخصصة</li>
+  <section>
+    <h1>Our Services</h1>
+    <ul class="list">
+      <li>🌐 Web Development – Modern, responsive, and global websites</li>
+      <li>📱 Mobile Applications – Cross-platform apps with Flutter & React Native</li>
+      <li>⚡ AI & Automation – Smart solutions for businesses</li>
+      <li>🎨 UI/UX Design – User-friendly and creative designs</li>
+      <li>☁️ Cloud Solutions – Secure and scalable infrastructure</li>
     </ul>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
